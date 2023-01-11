@@ -1,0 +1,7 @@
+#nav{
+    justify-content: space-evenly;
+}
+nav li{
+    display: inline;
+    margin-left: 50px;
+}

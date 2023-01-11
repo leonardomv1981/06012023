@@ -1,0 +1,40 @@
+body {
+    padding: 60px;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+}
+.caixa, .caixa2 {
+    border: 1px;
+    border-style: solid;
+    border-color: #d6d6d6;
+    border-radius: 3px;
+}
+.caixa {
+    padding: 5px 5px;
+    margin: 1%;
+    max-width: 30%;
+    text-align: justify;
+}
+.caixa2 {
+    max-width: 48%;
+    padding: 15px 10px;
+    margin: 1% 1%;
+    margin-top: 20px;
+}
+form {
+    text-align: center;
+}
+form label{
+    display: block;
+    margin: 0 0 10px;
+}
+form input {
+    margin: 0 0 10px;
+    padding: 10px 25px;
+    width: 50%;
+}
+#login-alert{
+    display: none;
+}
