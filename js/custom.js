@@ -49,7 +49,7 @@ $(document).ready(function(){
 	$("#modal-button").click(function(){
 		$("#modal-button").html('aguarde...');
 		$.ajax({
-			type : 'GET',
+			type : 'POST',
 			url  : 'action-modal.php',
 			data: '',
 			dataType: '',
