@@ -46,15 +46,19 @@ $(document).ready(function(){
 		});
 	});
 
-	$("#modal-button").click(function(){
+	//$(".modal-button").live.click(function(){
+	$('body').on('click', ".modal-button", function(){
 		$("#modal-button").html('aguarde...');
+		var linha = $(this).siblings('.linha').val();
+		var card = $(this).siblings('.card').val();
+		var tipo = $(this).siblings('.tipo').val();
 		$.ajax({
 			type : 'POST',
 			url  : 'action-modal.php',
-			data: '',
+			data: {linha, card, tipo},
 			dataType: '',
 			success :  function(response){
-					$("#card-title").html(response);
+					$("#modal-contentlg").html(response);
 					$('#largeModal').modal();
 					$("#modal-button").html('Ler mais...');	
 		    }

@@ -9,14 +9,19 @@ require 'texto.php';
             <div class="col-md-12">
                     <h2>Destaques</h2>
                 </div>
-                <?php foreach($arrayPosts['destaque'] as $key => $value) { ?>
+                <?php $i = 0;
+                foreach($arrayPosts['destaque'] as $key => $value) { ?>
                     <div class="caixa col-4">
                         <img src="<?php echo $value['image']; ?>">
                         <p class="card-text"><?php echo  mb_strimwidth($value['text'], 0, 150, '...'); ?> </p>
                         <!-- Large modal -->
-                        <button type="button" id="modal-button">Ler mais...</button>
+                        <input class="tipo" type="hidden" value="destaques">
+                        <input class="linha" type="hidden" value="0">
+                        <input class="card" type="hidden" value="<?php echo $i; ?>">
+                        <button type="button" id="modal-button" class="modal-button btn btn-light" linha='3' card='2'>Ler mais...</button>
                     </div>
-                <?php } ?>
+                <?php $i += 1;
+                } ?>
                 
                 <div class="col-md-12">     
                     <h2>Comum</h2>
